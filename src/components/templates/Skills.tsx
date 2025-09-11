@@ -1,6 +1,8 @@
 import LogoLoop from './../../../Reactbits/LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiLaravel, SiMysql } from 'react-icons/si';
 import { HiOutlineChartBar, HiDatabase } from "react-icons/hi";
+import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
+
 
 
 const techLogos = [
@@ -12,6 +14,7 @@ const techLogos = [
   { node: <HiOutlineChartBar />, title: "Power BI", href: "https://powerbi.microsoft.com" },
   { node: <SiMysql />, title: "My Sql", href: "https://" },
   { node: <HiDatabase />, title: "Sql Server", href: "https://" },
+  { node: <PiMicrosoftExcelLogoFill />, title: "Excel", href: "https://www.microsoft.com/excel" },
 ];
 
 const skills = [

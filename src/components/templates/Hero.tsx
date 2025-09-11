@@ -1,5 +1,6 @@
 import DecryptedText from "../../../Reactbits/DecryptedText";
 import LiquidEther from "../../../Reactbits/LiquidEther";
+import TextType from "../../../Reactbits/TextType";
 
 export default function Hero() {
     return (
@@ -32,6 +33,15 @@ export default function Hero() {
             sequential={true}
             speed={10}
             />
+            {/* <TextType
+  text={["Desenvolvedor Web & Analista de Dados", "Desenvolvedor Web & Analista de Dados"]}
+  typingSpeed={75}
+  pauseDuration={5000}
+  loop={true}
+  showCursor={true}
+  cursorCharacter="_"
+  textColors={['#3b82f6', '#2563eb']}
+/> */}
 
 
           </p>

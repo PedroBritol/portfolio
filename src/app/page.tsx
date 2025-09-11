@@ -5,6 +5,9 @@ import Projects from "@/components/templates/Projects";
 import Skills from "@/components/templates/Skills";
 import Image from "next/image";
 import ClickSpark from './../../Reactbits/ClickSpark';
+import Curriculo from "@/components/templates/Curriculo";
+import Sobremim from "@/components/templates/Sobremim";
+import Footer from "@/components/templates/Footer";
 
 export default function Home() {
   return (
@@ -20,7 +23,10 @@ export default function Home() {
         <Hero />
         <Projects />
         <Skills />
+        <Sobremim />
+        <Curriculo />
         <Contact />
+        <Footer />
       </ClickSpark>
     </main>
   );

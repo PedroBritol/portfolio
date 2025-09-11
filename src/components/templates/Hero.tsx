@@ -24,7 +24,7 @@ export default function Hero() {
           />
         <div className="container mx-auto px-4 absolute z-1">
           <h2 className="text-5xl font-kademono  font-bold mb-4 ">Olá, eu sou Pedro Brito</h2>
-          <p className="text-2xl text-slate-700">
+          <p className="text-2xl text-blue-900">
           <DecryptedText
             text="Desenvolvedor Web & Analista de Dados"
             animateOn="view"

@@ -77,7 +77,7 @@ const projects = [
               </Link>
             ))}
           </div>
-          <div className="mt-8 py-8">
+          {/* <div className="mt-8 py-8">
             <Swiper
               modules={[Navigation, Pagination, Autoplay, A11y]}
               navigation={false}
@@ -110,7 +110,7 @@ const projects = [
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </div> */}
         </div>
       </section>
     );

@@ -18,14 +18,15 @@ const techLogos = [
 ];
 
 const skills = [
-    "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
-    "PHP", "Laravel", "Python", "PySpark", "Pandas",
-    "SQL", "MySQL", "PostgreSQL", "Git", "Docker", "Tailwind CSS"
-  ];
-  
+  "Git","GitHub","VSCode","HTML","CSS","Tailwind CSS","JavaScript","TypeScript","React.js (Next.js)","Laravel (PHP)",
+  "Design Responsivo","SCRUM","SQL","MySQL","Modelagem de Dados","Python","Power BI","Excel","Power Query",
+  "Análise de Dados","Visualização de Dados","Dashboards Interativos","Estatística Básica","Trabalho em Equipe",
+  "Comunicação","Resolução de Problemas","Proatividade","Pensamento Estratégico","Adaptabilidade"
+]
+
   export default function Skills() {
     return (
-      <section id="skills" className="py-20 bg-gray-800">
+      <section id="skills" className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-12">Habilidades Técnicas</h2>
           <div className="flex flex-wrap justify-center gap-4">
@@ -36,7 +37,7 @@ const skills = [
             ))}
           </div>
         </div>
-        <div style={{ height: '200px', position: 'relative', overflow: 'hidden' }} className="mt-10">
+        <div style={{ height: '100px', position: 'relative', overflow: 'hidden' }} className="mt-20">
       <LogoLoop
         logos={techLogos}
         speed={60}
@@ -46,9 +47,9 @@ const skills = [
         pauseOnHover
         scaleOnHover
         fadeOut
-        fadeOutColor="#2e2d2d"
+        fadeOutColor="#20a0a0a"
         ariaLabel="Technology partners"
-        className="text-amber-100"
+        className="text-white"
       />
     </div>
       </section>

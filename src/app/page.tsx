@@ -8,10 +8,11 @@ import ClickSpark from './../../Reactbits/ClickSpark';
 import Curriculo from "@/components/templates/Curriculo";
 import Sobremim from "@/components/templates/Sobremim";
 import Footer from "@/components/templates/Footer";
+import Particles from "../../Reactbits/Particles";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-neutral-950 min-h-screen ">
       <ClickSpark
           sparkColor='#fff'
           sparkSize={10}
@@ -19,6 +20,18 @@ export default function Home() {
           sparkCount={8}
           duration={400}
         >
+    <div style={{ width: '100vw', height: '100vh', position: 'fixed'  }}>
+      <Particles
+        particleColors={['#ffffff', '#ffffff']}
+        particleCount={200}
+        particleSpread={10}
+        speed={0.1}
+        particleBaseSize={100}
+        moveParticlesOnHover={true}
+        alphaParticles={false}
+        disableRotation={false}
+      />
+  </div>
         <Header />
         <Hero />
         <Projects />

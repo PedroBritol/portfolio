@@ -1,10 +1,10 @@
 import DecryptedText from "../../../Reactbits/DecryptedText";
 import LiquidEther from "../../../Reactbits/LiquidEther";
+import RotatingText from "../../../Reactbits/RotatingText";
 import TextType from "../../../Reactbits/TextType";
 
 export default function Hero() {
     return (
-      //style={{ width: '100%', height: 600, position: 'relative' }}
       <section style={{ width: '100%', height: '100vh', position: 'relative' }} className=" bg-neutral-950 text-white min-h-screen flex items-center justify-center text-center">
           <LiquidEther
             colors={[ '#5227FF', '#9A5CFF', '#B19EEF' ]}
@@ -20,33 +20,38 @@ export default function Hero() {
             autoSpeed={0.5}
             autoIntensity={2.2}
             takeoverDuration={0.25}
-            autoResumeDelay={3000}
+            autoResumeDelay={100}
             autoRampDuration={0.6}
           />
         <div className="container mx-auto px-4 absolute z-1">
-          <h2 className="text-5xl font-kademono  font-bold mb-4 ">Olá, eu sou Pedro Brito</h2>
-          <p className="text-2xl text-blue-900">
-          <DecryptedText
-            text="Desenvolvedor Web & Analista de Dados"
-            animateOn="view"
-            revealDirection="start"
-            sequential={true}
-            speed={10}
-            />
+          <h2 className="text-6xl font-kademono font-bold mb-4 text-start ">Olá, eu sou <br/> Pedro Brito</h2>
             {/* <TextType
-  text={["Desenvolvedor Web & Analista de Dados", "Desenvolvedor Web & Analista de Dados"]}
-  typingSpeed={75}
-  pauseDuration={5000}
-  loop={true}
-  showCursor={true}
-  cursorCharacter="_"
-  textColors={['#3b82f6', '#2563eb']}
-/> */}
-
-
+              text={["Analista de Dados & Desenvolvedor Web", "Desenvolvedor Web & Analista de Dados"]}
+              typingSpeed={75}
+              pauseDuration={4000}
+              loop={true}
+              showCursor={true}
+              cursorCharacter="_"
+              textColors={["#fffff"]}
+              className="text-2xl font-semibold mt-8"
+            /> */}
+            <RotatingText
+              texts={['Analista de Dados', 'Desenvolvedor Web']}
+              mainClassName=" bg-[#5227FF] w-56 px-1 text-2xl text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-start rounded-lg"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={2000}
+            />
+          <p className="hidden sm:block mt-6 mx-auto text-4xl font-bold text-start text-transparent bg-clip-text bg-gradient-to-r from-[#5227FF] via-[#ff33a3] via-33% to-[#5227FF]">
+          TRANSFORMANDO DADOS EM INSIGHTS E IDEIAS <br/> EM APLICAÇÕES WEB ROBUSTAS E ESCALÁVEIS.
           </p>
-          <p className="mt-6 max-w-2xl mx-auto">
-            Transformando dados em insights e ideias em aplicações web robustas e escaláveis.
+          <p className="block sm:hidden mt-6 mx-auto text-4xl font-bold text-start text-transparent bg-clip-text bg-gradient-to-r from-[#5227FF] via-[#ff33a3] to-[#5227FF]">
+          TRANSFORMANDO DADOS EM INSIGHTS E IDEIAS EM APLICAÇÕES WEB ROBUSTAS E ESCALÁVEIS.
           </p>
         </div>
       </section>

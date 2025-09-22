@@ -20,8 +20,8 @@ export default function Hero() {
             autoSpeed={0.5}
             autoIntensity={2.2}
             takeoverDuration={0.25}
-            autoResumeDelay={100}
-            autoRampDuration={0.6}
+            autoResumeDelay={1}
+            autoRampDuration={0.1}
           />
         <div className="container mx-auto px-4 absolute z-1">
           <h2 className="text-6xl font-kademono font-bold mb-4 text-start ">Olá, eu sou <br/> Pedro Brito</h2>

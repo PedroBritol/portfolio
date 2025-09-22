@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { projects } from "@/data/projects";
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+export default async function ProjectPage({ params }: { params: { id: string } }) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) return notFound();
@@ -15,7 +15,8 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         alt={project.title}
         width={800}
         height={400}
-        className="rounded-lg mb-6"
+        className="rounded-lg mb-6 w-full h-auto"
+        priority
       />
       <p className="text-lg mb-6">{project.description}</p>
       <div className="flex flex-wrap gap-2">

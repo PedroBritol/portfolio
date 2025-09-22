@@ -4,48 +4,8 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
 import ProjectCard from './../cards/ProjectCard';
+import {projects} from '@/data/projects';
 
-const projects = [
-    {
-      id: 1,
-      imageUrl: "/dashboard1.png",
-      title: "Dashboard de Frotas",
-      description: "Sistema de gerenciamento de frotas desenvolvido com Power bi e Excel, permitindo o monitoramento e a análise de dados de veículos.",
-      stack: ["Power BI", "Excel", "Power Query"],
-
-    },
-    {
-      id: 2,
-      imageUrl: "/portfolio.png",
-      title: "Este Site",
-      description: "Site pessoal desenvolvido com Next.js e Tailwind CSS, apresentando meu portfólio, habilidades e informações de contato.",
-      stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      id: 3,
-      imageUrl: "/dashboard1.png",
-      title: "Dashboard de Frotas",
-      description: "Sistema de gerenciamento de frotas desenvolvido com Power bi e Excel, permitindo o monitoramento e a análise de dados de veículos.",
-      stack: ["Power BI", "Excel", "Power Query"],
-
-    },
-    {
-      id: 4,
-      imageUrl: "/portfolio.png",
-      title: "Este Site",
-      description: "Site pessoal desenvolvido com Next.js e Tailwind CSS, apresentando meu portfólio, habilidades e informações de contato.",
-      stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      id: 5,
-      imageUrl: "/dashboard1.png",
-      title: "Dashboard de Frotas",
-      description: "Sistema de gerenciamento de frotas desenvolvido com Power bi e Excel, permitindo o monitoramento e a análise de dados de veículos.",
-      stack: ["Power BI", "Excel", "Power Query"],
-
-    },
-  ];
-  
 
 
   export default function Projects() {
@@ -57,7 +17,6 @@ const projects = [
             {projects.map((project, index) => (
               <Link key={index} className="cursor-pointer bg-stone-950 border-purple-950 border p-6 rounded-lg shadow-lg max-w-[400px] mx-auto hover:scale-105 transition-transform duration-300 relative"
                 href={`/projetos/${project.id}`}
-                target="_blank"
                 >
                 <Image
                   src={project.imageUrl}

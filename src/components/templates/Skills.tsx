@@ -18,8 +18,8 @@ const techLogos = [
 ];
 
 const skills = [
-  "Git","GitHub","VSCode","HTML","CSS","Tailwind CSS","JavaScript","TypeScript","React.js (Next.js)","Laravel (PHP)",
-  "Design Responsivo","SCRUM","SQL","MySQL","Modelagem de Dados","Python","Power BI","Excel","Power Query",
+  "Git","GitHub","VSCode","HTML","CSS","Tailwind CSS","JavaScript","TypeScript","Next.js (React.js)","Laravel (PHP)",
+  "Design Responsivo","SCRUM","SQL","MySQL", "SQLserver","Modelagem de Dados","Python","Power BI","Excel","Power Query",
   "Análise de Dados","Visualização de Dados","Dashboards Interativos","Estatística Básica","Trabalho em Equipe",
   "Comunicação","Resolução de Problemas","Proatividade","Pensamento Estratégico","Adaptabilidade"
 ]

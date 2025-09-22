@@ -35,18 +35,20 @@ export default function Hero() {
               textColors={["#fffff"]}
               className="text-2xl font-semibold mt-8"
             /> */}
-            <RotatingText
-              texts={['Analista de Dados', 'Desenvolvedor Web']}
-              mainClassName=" bg-[#5227FF] w-56 px-1 text-2xl text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-start rounded-lg"
-              staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerDuration={0}
-              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={2000}
-            />
+            <div className="flex mt-8 text-2xl font-semibold justify-start">
+              <RotatingText
+                texts={['Analista de Dados', 'Desenvolvedor Web']}
+                mainClassName=" px-2 sm:px-2 md:px-3 bg-[#5227FF] text-white  overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
+              />
+            </div>
           <p className="hidden sm:block mt-6 mx-auto text-4xl font-bold text-start text-transparent bg-clip-text bg-gradient-to-r from-[#5227FF] via-[#ff33a3] via-33% to-[#5227FF]">
           TRANSFORMANDO DADOS EM INSIGHTS E IDEIAS <br/> EM APLICAÇÕES WEB ROBUSTAS E ESCALÁVEIS.
           </p>

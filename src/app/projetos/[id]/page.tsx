@@ -1,14 +1,16 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { projects } from "@/data/projects";
+import Header from "@/components/templates/Header";
 
-export default async function ProjectPage({ params }: { params: { id: string } }) {
+export default async function ProjectPage({ params }: { params: { id: string} }) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) return notFound();
 
   return (
     <div className="bg-neutral-950 container mx-auto px-4 py-20 text-white">
+      <Header/>
       <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
       <Image
         src={project.imageUrl}

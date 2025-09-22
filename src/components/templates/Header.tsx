@@ -78,7 +78,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 z-50 flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-neutral-900 backdrop-blur-sm text-sm py-3 dark:bg-neutral-900">
       <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
         <div className="flex items-center justify-between">
-          <Link href="#" className="flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80" aria-label="Brand" onClick={handleLinkClick}>
+          <Link href="/" className="flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80" aria-label="Brand" onClick={handleLinkClick}>
             <span className="inline-flex items-center gap-x-2 text-xl font-semibold text-white">
               <Image
                 src="/logo4.png"
@@ -109,11 +109,11 @@ export default function Header() {
         <div className={`overflow-hidden transition-all duration-300 basis-full grow sm:block ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
             {/* <Link className="font-medium text-purple-900 focus:outline-hidden" href="#projects" aria-current="page" onClick={handleLinkClick}>Projetos</Link> */}
-            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#projects" onClick={handleLinkClick}>Projetos</Link>
-            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#skills" onClick={handleLinkClick}>Habilidades</Link>
-            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#sobremim" onClick={handleLinkClick}>Sobre Mim</Link>
-            <Link className="font-medium text-[#4c238d] hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#curriculo" onClick={handleLinkClick}>Curriculo</Link>
-            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#contact" onClick={handleLinkClick}>Contato</Link>
+            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#projects" onClick={handleLinkClick}>Projetos</Link>
+            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#skills" onClick={handleLinkClick}>Habilidades</Link>
+            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#sobremim" onClick={handleLinkClick}>Sobre Mim</Link>
+            <Link className="font-medium text-[#4c238d] hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#curriculo" onClick={handleLinkClick}>Curriculo</Link>
+            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#contact" onClick={handleLinkClick}>Contato</Link>
           </div>
         </div>
       </nav>

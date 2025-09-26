@@ -21,7 +21,7 @@ export default function Sobremim() {
               showBehindGradient={false}
               className="mb-12"
             />
-          <div className=" flex max-w-3xl text-justify space-y-6">
+          <div className=" flex text-justify space-y-6">
             <p className="text-amber-50">
               Sou estudante de engenharia da computação, apaixonado por tecnologia. Gosto de criar soluções 
               práticas, trabalhar em equipe e estou sempre em busca de aprendizado contínuo e novas experiências. Tenho 

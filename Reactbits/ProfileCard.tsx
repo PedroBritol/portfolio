@@ -315,15 +315,17 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                     <div className="pc-status">{status}</div>
                   </div>
                 </div>
-                <button
+                <a href={`https://instagram.com/${handle}`} target="_blank" rel="noopener noreferrer">
+                  <button
                   className="pc-contact-btn"
                   onClick={handleContactClick}
                   style={{ pointerEvents: 'auto' }}
                   type="button"
-                  aria-label={`Contact ${name || 'user'}`}
-                >
+                  aria-label={`Contact ${name || 'user'} on Instagram`}
+                  >
                   {contactText}
-                </button>
+                  </button>
+                </a>
               </div>
             )}
           </div>

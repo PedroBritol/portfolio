@@ -12,7 +12,7 @@ import Particles from "../../Reactbits/Particles";
 
 export default function Home() {
   return (
-    <main className="bg-neutral-950 min-h-screen ">
+    <main className="min-h-screen ">
       <ClickSpark
           sparkColor='#fff'
           sparkSize={10}
@@ -20,7 +20,7 @@ export default function Home() {
           sparkCount={8}
           duration={400}
         >
-    <div style={{ width: '100vw', height: '100vh', position: 'fixed'  }}>
+    <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: "-10"}}>
       <Particles
         particleColors={['#ffffff', '#ffffff']}
         particleCount={200}
@@ -30,6 +30,7 @@ export default function Home() {
         moveParticlesOnHover={true}
         alphaParticles={false}
         disableRotation={false}
+        className=" w-full h-full"
       />
   </div>
         <Header />

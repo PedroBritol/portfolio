@@ -9,13 +9,13 @@ export default function Contact() {
           <div className="flex justify-center">
             <a 
               href="mailto:pb_lucasbol@hotmail.com" 
-              className="absolute bg-lime-600 hover:bg-[#522c8f7a] text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300"
+              className=" bg-lime-600 hover:bg-[#522c8f7a] text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300"
             >
               ENVIAR E-MAIL
             </a>
           </div>
           <div className="mt-20 text-lg text-white flex justify-center">
-            <p className="absolute">Ou me encontre no <a href="https://linkedin.com/in/pedro-britol" target="_blank" rel="noopener noreferrer" className="text-lime-600 underline">LinkedIn</a>.</p>
+            <p className="">Ou me encontre no <a href="https://linkedin.com/in/pedro-britol" target="_blank" rel="noopener noreferrer" className="text-lime-600 underline">LinkedIn</a>.</p>
           </div>
         </div>
       </section>

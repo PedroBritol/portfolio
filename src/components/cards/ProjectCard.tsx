@@ -15,7 +15,7 @@ const ProjectCard = ({ imageUrl, title, description, stack, id }: ProjectCardPro
   return (
     
       
-              <Link key={id} className="cursor-pointer bg-stone-950 border-purple-950 border p-6 rounded-lg shadow-lg max-w-[400px] mx-auto hover:scale-105 transition-transform duration-300 relative"
+              <Link key={id} className="cursor-pointer bg-stone-950 border-purple-950 border p-6 rounded-lg shadow-lg max-w-[400px] mx-auto hover:scale-105 transition-transform duration-300"
                 href={`/projetos/${id}`}
                 >
                 <Image

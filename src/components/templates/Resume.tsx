@@ -1,4 +1,4 @@
-export default function Curriculo() {
+export default function Resume() {
     return (
       <section id="curriculo" className="py-20 ">
         <div className="container mx-auto px-4">

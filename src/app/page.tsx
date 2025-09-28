@@ -5,8 +5,8 @@ import Projects from "@/components/templates/Projects";
 import Skills from "@/components/templates/Skills";
 import Image from "next/image";
 import ClickSpark from './../../Reactbits/ClickSpark';
-import Curriculo from "@/components/templates/Curriculo";
-import Sobremim from "@/components/templates/Sobremim";
+import Curriculo from "@/components/templates/Resume";
+import Sobremim from "@/components/templates/AboutMe";
 import Footer from "@/components/templates/Footer";
 import Particles from "../../Reactbits/Particles";
 

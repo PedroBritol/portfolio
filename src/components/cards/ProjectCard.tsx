@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import {projects} from '@/data/projects';
+import {projectsData} from '@/data/projectsData';
 import Link from 'next/link';
 
 type ProjectCardProps = {

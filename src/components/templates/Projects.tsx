@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
 import ProjectCard from './../cards/ProjectCard';
-import {projects} from '@/data/projects';
+import {projectsData} from '@/data/projectsData';
 
 
 
@@ -14,11 +14,11 @@ import {projects} from '@/data/projects';
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Meus Projetos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {projects.map((card, index) => (
+          {projectsData.map((card, index) => (
                 <ProjectCard
                   key={index}
                   id={card.id}
-                  imageUrl={card.imageUrl}
+                  imageUrl={card.imageUrl[0]}
                   title={card.title}
                   description={card.description}
                   stack={card.stack}

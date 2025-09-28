@@ -1,7 +1,9 @@
-import LogoLoop from './../../../Reactbits/LogoLoop';
+import LogoLoop from '../../../Reactbits/LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiLaravel, SiMysql } from 'react-icons/si';
 import { HiOutlineChartBar, HiDatabase } from "react-icons/hi";
 import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
+import SkillCard from '@/components/cards/SkillsCard';
+import { allSkills } from '@/data/skillsData';
 
 
 
@@ -17,41 +19,41 @@ const techLogos = [
   { node: <PiMicrosoftExcelLogoFill />, title: "Excel", href: "https://www.microsoft.com/excel" },
 ];
 
-const skills = [
-  "Git","GitHub","VSCode","HTML","CSS","Tailwind CSS","JavaScript","TypeScript","Next.js (React.js)","Laravel (PHP)",
-  "Design Responsivo","SCRUM","SQL","MySQL", "SQLserver","Modelagem de Dados","Python","Power BI","Excel","Power Query",
-  "Análise de Dados","Visualização de Dados","Dashboards Interativos","Estatística Básica","Trabalho em Equipe",
-  "Comunicação","Resolução de Problemas","Proatividade","Pensamento Estratégico","Adaptabilidade"
-]
-
   export default function Skills() {
     return (
       <section id="skills" className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-12">Habilidades Técnicas</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {skills.map((skill, index) => (
-              <div key={index} className="bg-gray-700 text-white font-semibold px-4 py-2 rounded-lg shadow-md">
-                {skill}
-              </div>
+
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center text-white mb-16">
+            Minhas Habilidades
+          </h2>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-16">
+            {allSkills.map((skill) => (
+              <SkillCard
+                key={skill.name}
+                name={skill.name}
+                icon={skill.icon}
+              />
             ))}
           </div>
         </div>
-        <div style={{ height: '100px', position: 'relative', overflow: 'hidden' }} className="mt-20">
-      <LogoLoop
-        logos={techLogos}
-        speed={60}
-        direction="left"
-        logoHeight={48}
-        gap={40}
-        pauseOnHover
-        scaleOnHover
-        fadeOut
-        fadeOutColor="#20a0a0a"
-        ariaLabel="Technology partners"
-        className="text-white"
-      />
-    </div>
+
+        <div style={{ height: '100px', position: 'relative', overflow: 'hidden' }} className="mt-40">
+          <LogoLoop
+            logos={techLogos}
+            speed={60}
+            direction="left"
+            logoHeight={48}
+            gap={40}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#20a0a0a"
+            ariaLabel="Technology partners"
+            className="text-white"
+          />
+        </div>
       </section>
     );
   }

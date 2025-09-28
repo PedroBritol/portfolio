@@ -20,7 +20,7 @@ export default function Home() {
           sparkCount={8}
           duration={400}
         >
-    <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: "-10"}}>
+    <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: "-10", top: 0, left: 0 }}>
       <Particles
         particleColors={['#ffffff', '#ffffff']}
         particleCount={200}
@@ -30,7 +30,7 @@ export default function Home() {
         moveParticlesOnHover={true}
         alphaParticles={false}
         disableRotation={false}
-        className=" w-full h-full"
+        className=" w-full h-full top-0 left-0"
       />
   </div>
         <Header />

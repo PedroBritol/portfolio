@@ -1,7 +1,5 @@
-import DecryptedText from "../../../Reactbits/DecryptedText";
 import LiquidEther from "../../../Reactbits/LiquidEther";
 import RotatingText from "../../../Reactbits/RotatingText";
-import TextType from "../../../Reactbits/TextType";
 
 export default function Hero() {
     return (
@@ -25,16 +23,6 @@ export default function Hero() {
           />
         <div className="container mx-auto px-4 absolute z-1">
           <h2 className="text-6xl font-kademono font-bold mb-4 text-start ">Olá, eu sou <br/> Pedro Brito</h2>
-            {/* <TextType
-              text={["Analista de Dados & Desenvolvedor Web", "Desenvolvedor Web & Analista de Dados"]}
-              typingSpeed={75}
-              pauseDuration={4000}
-              loop={true}
-              showCursor={true}
-              cursorCharacter="_"
-              textColors={["#fffff"]}
-              className="text-2xl font-semibold mt-8"
-            /> */}
             <div className="flex mt-8 text-2xl font-semibold justify-start">
               <RotatingText
                 texts={['Analista de Dados', 'Desenvolvedor Web']}

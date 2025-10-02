@@ -4,8 +4,6 @@ import { projectsData } from "@/data/projectsData";
 import Header from "@/components/templates/Header";
 import Link from "next/link";
 import Footer from "@/components/templates/Footer";
-import { div } from "motion/react-client";
-import Skills from "@/components/templates/Skills";
 
 export default async function ProjectPage({ params }: { params: { id: string} }) {
   const project = projectsData.find((p) => p.id === params.id);

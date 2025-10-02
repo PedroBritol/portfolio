@@ -4,8 +4,12 @@ import { projectsData } from "@/data/projectsData";
 import Header from "@/components/templates/Header";
 import Link from "next/link";
 import Footer from "@/components/templates/Footer";
-
-export default async function ProjectPage({ params }: { params: { id: string} }) {
+type ProjectPageProps = {
+  params: {
+    id: string;
+  };
+};
+export default async function ProjectPage({ params }: ProjectPageProps) {
   const project = projectsData.find((p) => p.id === params.id);
 
   if (!project) return notFound();

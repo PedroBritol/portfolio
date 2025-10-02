@@ -1,5 +1,5 @@
 import React from 'react';
-export type ProjectProps = {
+type ProjectProps = {
     id: string;
     imageUrl: string[];
     title: string;

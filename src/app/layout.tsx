@@ -22,15 +22,15 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  metadataBase: new URL("https://meudominio"),
+  metadataBase: new URL("https://www.pedrobritol.com.br"),
   openGraph: {
     title: "Pedro Brito - Desenvolvedor & Analista de Dados",
     description: "Portfólio de Pedro Brito, especialista em desenvolvimento web com Laravel e Next.js, e análise de dados.",
-    url: "https://meudominio",
+    url: "https://www.pedrobritol.com.br",
     siteName: "Portfólio Pedro Brito",
     images: [
       {
-        url: "https://meudominio/og-image.png",
+        url: "https://www.pedrobritol.com.br/avatar.png",
         width: 1200,
         height: 630,
         alt: "Pedro Brito - Desenvolvedor & Analista de Dados",

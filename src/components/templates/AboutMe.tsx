@@ -12,9 +12,9 @@ export default function AboutMe() {
             <ProfileCard
               name="PEDRO BRITO"
               title="Analista e dev"
-              handle="pedrobrito04"
+              handle="pedro-britol"
               status="Online"
-              contactText="INSTAGRAM"
+              contactText="LINKEDIN"
               avatarUrl="/avatar.png"
               showUserInfo={true}
               enableTilt={true}

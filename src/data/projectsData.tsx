@@ -21,7 +21,7 @@ export const projectsData: ProjectProps[] = [
     title: "Dashboard de Frotas",
     description:
     "Sistema de gerenciamento de frotas desenvolvido com Power BI e Excel, permitindo o monitoramento e a análise de dados de veículos.",
-    stack: ["Power BI", "Excel", "Power Query"],
+    stack: ["Power BI", "Excel", "Power Query", "DAX"],
     frame: <iframe title="Dashboard Frotas" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiOWEyNWQwN2QtYTEwNi00ZTI3LWExY2UtNTI3YjZjODVkYTE4IiwidCI6ImE4MDRiZjBjLTRjYTUtNDFkOS04MmZmLTQ3N2M1YjlmMzRiNCJ9" frameBorder="0" allowFullScreen={true}></iframe>,
     src: "https://app.powerbi.com/view?r=eyJrIjoiOWEyNWQwN2QtYTEwNi00ZTI3LWExY2UtNTI3YjZjODVkYTE4IiwidCI6ImE4MDRiZjBjLTRjYTUtNDFkOS04MmZmLTQ3N2M1YjlmMzRiNCJ9",
     text: "Este projeto visa a criação de um dashboard de frotas para monitoramento e análise de veículos e sua performance, utilizando Power BI. A solução foi desenvolvida com o objetivo de otimizar a gestão da frota e fornecer insights acionáveis a partir de dados históricos e operacionais.",

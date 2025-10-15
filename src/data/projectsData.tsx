@@ -17,7 +17,7 @@ type ProjectProps = {
 export const projectsData: ProjectProps[] = [
     {
     id: "1",
-    imageUrl:["/dashboard1.png", "/dashboard2.png"],
+    imageUrl:["/frotas1.png", "/frotas2.png", "/frotas3.png", "/frotas4.png", "/frotas5.png"],
     title: "Dashboard de Frotas",
     description:
     "Sistema de gerenciamento de frotas desenvolvido com Power BI e Excel, permitindo o monitoramento e a análise de dados de veículos.",

@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }: any) {
               </>
             )}
             <ul className="mt-10 list-disc list-inside">
-              {project.stack.map((tech) => (
+              {project.stack!.map((tech) => (
                 <li key={tech}>{tech}</li>
               ))}
             </ul>
@@ -50,12 +50,14 @@ export default async function ProjectPage({ params }: any) {
             <div className="flex mt-10 w-full h-[250px] sm:h-[410px] md:h-[500px] lg:h-[640px] xl:h-[780px] 2xl:h-[900px]">
               {project.frame}
             </div>
-            <div className="mt-6 mr-2 w-full break-words">
-              <span className="w-full">Link do projeto:</span>
-              <Link href={project.src} passHref target="_blank" rel="noopener noreferrer" className="contents text-blue-500 underline cursor-pointer">
-                  {project.src}
-              </Link>
-            </div>
+          </div>
+        )}
+        {project.src && (
+          <div className="mt-6 w-full break-words">
+            <span className="w-full">Link do projeto: </span>
+            <Link href={project.src ?? "#"} passHref target="_blank" rel="noopener noreferrer" className="text-blue-500 cursor-pointer">
+                {project.src}
+            </Link>
           </div>
         )}
       </div>

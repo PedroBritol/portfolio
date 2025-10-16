@@ -4,14 +4,15 @@ type ProjectProps = {
     imageUrl: string[];
     title: string;
     description: string;
-    stack: string[];
+    stack?: string[];
     frame?: React.ReactNode;
-    src: string;
+    src?: string;
     text: string;
     textTittle2?: string;
     text2?: string;
     textTittle3?: string;
     text3?: string;
+    externalLink?: string;
 };
 
 export const projectsData: ProjectProps[] = [
@@ -19,8 +20,7 @@ export const projectsData: ProjectProps[] = [
     id: "1",
     imageUrl:["/frotas1.png", "/frotas2.png", "/frotas3.png", "/frotas4.png", "/frotas5.png"],
     title: "Dashboard de Frotas",
-    description:
-    "Sistema de gerenciamento de frotas desenvolvido com Power BI e Excel, permitindo o monitoramento e a análise de dados de veículos.",
+    description:"Sistema de gerenciamento de frotas desenvolvido com Power BI e Excel, permitindo o monitoramento e a análise de dados de veículos.",
     stack: ["Power BI", "Excel", "Power Query", "DAX"],
     frame: <iframe title="Dashboard Frotas" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiOWEyNWQwN2QtYTEwNi00ZTI3LWExY2UtNTI3YjZjODVkYTE4IiwidCI6ImE4MDRiZjBjLTRjYTUtNDFkOS04MmZmLTQ3N2M1YjlmMzRiNCJ9" frameBorder="0" allowFullScreen={true}></iframe>,
     src: "https://app.powerbi.com/view?r=eyJrIjoiOWEyNWQwN2QtYTEwNi00ZTI3LWExY2UtNTI3YjZjODVkYTE4IiwidCI6ImE4MDRiZjBjLTRjYTUtNDFkOS04MmZmLTQ3N2M1YjlmMzRiNCJ9",
@@ -32,12 +32,19 @@ export const projectsData: ProjectProps[] = [
 },
     {
     id: "2",
-    imageUrl: ["/portfolio.png"],
+    imageUrl: ["/portfolio.jpg", "/portfolio2.png", "/portfolio3.png"],
     title: "Este Site",
-    description:
-    "Site pessoal desenvolvido com Next.js e Tailwind CSS, apresentando meu portfólio, habilidades e informações de contato.",
+    description:"Site pessoal desenvolvido com Next.js e Tailwind CSS, apresentando meu portfólio, habilidades e informações de contato.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    src: "",
-    text: "Em desenvolvimento"
+    src: "https://github.com/pedrobritol",
+    text: "Este projeto é o desenvolvimento do meu site pessoal, que serve como um portfólio para exibir meus projetos, habilidades e informações de contato. Construído com Next.js, uma poderosa estrutura React para aplicações web, e estilizado com Tailwind CSS, o site é responsivo e moderno. Ele inclui seções detalhadas sobre minha experiência, projetos anteriores e links para minhas redes sociais e repositórios de código. Além disso, o site foi projetado para ser facilmente expansível, permitindo a adição de novos projetos e atualizações de conteúdo de forma eficiente.",
 },
+    {
+    id: "3",
+    imageUrl: ["/certificados.png"],
+    title: "Certificados",
+    description: "Coleção de certificados obtidos em cursos e treinamentos, demonstrando minhas habilidades e conhecimentos adquiridos.",
+    text: "",
+    externalLink: "https://drive.google.com/drive/folders/1jTRO6-xGluFgw3KiEBguxJnTRl5SkQop?usp=sharing"
+}
 ];

@@ -9,14 +9,15 @@ type ProjectCardProps = {
   title: string;
   description: string;
   stack: string[];
+  externalLink?: string;
 };
 
-const ProjectCard = ({ imageUrl, title, description, stack, id }: ProjectCardProps) => {
+const ProjectCard = ({ imageUrl, title, description, stack, id, externalLink}: ProjectCardProps) => {
   return (
     
       
               <Link key={id} className="cursor-pointer bg-stone-950 border-purple-950 border p-6 rounded-lg shadow-lg max-w-[400px] mx-auto hover:scale-105 transition-transform duration-300"
-                href={`/projetos/${id}`}
+                href={externalLink || `/projetos/${id}`}
                 >
                 <Image
                   src={imageUrl}

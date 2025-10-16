@@ -14,7 +14,8 @@ import {projectsData} from '@/data/projectsData';
                   imageUrl={card.imageUrl[0]}
                   title={card.title}
                   description={card.description}
-                  stack={card.stack}
+                  stack={card.stack || []}
+                  externalLink={card.externalLink}
                 />
               ))}
           </div>

@@ -1,0 +1,14 @@
+# Portfólio de Pedro Brito
+
+> Especialista em Desenvolvimento Web e Análise de Dados.
+
+Este site é o portfólio oficial de Pedro Brito, um desenvolvedor com experiência em tecnologias modernas de Front-end e Back-end, além de análise de dados.
+
+## Informações Principais
+- **Nome**: Pedro Brito
+- **Áreas de Atuação**: Desenvolvedor Web e Analista de Dados.
+- **Tecnologias**: Laravel, Next.js, React, TypeScript.
+- **Website**: https://www.pedrobritol.com.br
+
+## Sobre o Site
+Este portfólio demonstra os projetos de Pedro Brito, unindo habilidades de desenvolvimento de software e análise de dados para solucionar problemas reais e gerar valor.

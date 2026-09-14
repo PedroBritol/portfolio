@@ -54,7 +54,7 @@
   --card-opacity: 1;
 }
 
-//esse
+/* esse */
 .pc-card-wrapper:hover::before,
 .pc-card-wrapper.active::before {
   filter: contrast(1) saturate(1) blur(40px) opacity(0.8);
@@ -185,7 +185,7 @@
   opacity: 0;
 }
 
-//esse
+/* esse */
 .pc-card:hover .pc-shine,
 .pc-card.active .pc-shine {
   filter: brightness(0.2) contrast(1.33) saturate(0.33) opacity(0.5);

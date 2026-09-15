@@ -14,8 +14,8 @@ const techLogos = [
   { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
   { node: <SiLaravel />, title: "Laravel", href: "https://laravel.com" },
   { node: <HiOutlineChartBar />, title: "Power BI", href: "https://powerbi.microsoft.com" },
-  { node: <SiMysql />, title: "My Sql", href: "https://" },
-  { node: <HiDatabase />, title: "Sql Server", href: "https://" },
+  { node: <SiMysql />, title: "My Sql", href: "https://www.mysql.com" },
+  { node: <HiDatabase />, title: "Sql Server", href: "https://www.microsoft.com/sql-server" },
   { node: <PiMicrosoftExcelLogoFill />, title: "Excel", href: "https://www.microsoft.com/excel" },
 ];
 

@@ -7,7 +7,8 @@ import Footer from "@/components/templates/Footer";
 import ProjectSliderCard from "@/components/cards/ProjectSliderCard";
 
 export default async function ProjectPage({ params }: any) {
-  const project = projectsData.find((p) => p.id === params.id);
+  const { id } = await params;
+  const project = projectsData.find((p) => p.id === id);
 
   if (!project) return notFound();
 

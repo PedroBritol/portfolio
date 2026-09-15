@@ -8,7 +8,7 @@ Este site é o portfólio oficial de Pedro Brito, um desenvolvedor com experiên
 - **Nome**: Pedro Brito
 - **Áreas de Atuação**: Desenvolvedor Web e Analista de Dados.
 - **Tecnologias**: Laravel, Next.js, React, TypeScript.
-- **Website**: https://www.pedrobritol.com.br
+- **Website**: [https://www.pedrobritol.com.br](https://www.pedrobritol.com.br)
 
 ## Sobre o Site
 Este portfólio demonstra os projetos de Pedro Brito, unindo habilidades de desenvolvimento de software e análise de dados para solucionar problemas reais e gerar valor.

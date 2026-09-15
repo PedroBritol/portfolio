@@ -24,6 +24,7 @@ const ProjectCard = ({ imageUrl, title, description, stack, id, externalLink}: P
                   alt={title}
                   width={400}
                   height={200}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="w-full h-48 object-cover mb-4 rounded"
                 />
 

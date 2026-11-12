@@ -1,0 +1,5 @@
+[
+  { "check": "phone-number", "target": "nav__actions > a.btn.btn--primary", "reason": "the client's own WhatsApp is the site's real contact, given by the existing site (the brief); it is meant to be dialled. Same link in the hero and the close." },
+  { "check": "photo-upscale", "target": "hero__media--portrait", "reason": "the client has only this 432x577 portrait; shown at its natural size it broke the split and the float card. Listed in the report: Pedro must supply a portrait of at least 1300px on the long side." },
+  { "check": "hero-lines", "target": "section.hero h1", "reason": "the h1 is final: 'Dashboards em Power BI e sistemas web', 37 characters, 3 lines at 1440 and 2 to 3 at 390; only the 45-character stress fill takes a fourth line" }
+]

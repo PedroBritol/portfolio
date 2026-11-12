@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# taste skill: shots, Chrome profiles and logs (the deal history stays)
+.taste-skill/chrome-*/
+.taste-skill/shots/
+.taste-skill/gate/
+.taste-skill/*.txt
+.taste-skill/*.log
+.taste-skill/*.html

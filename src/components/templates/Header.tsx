@@ -20,8 +20,8 @@ export default function Header() {
               <Image
                 src="/logo4.png"
                 alt="Logo"
-                width={100}
-                height={0}
+                width={40}
+                height={40}
                 className='w-10 h-10 object-cover'
               />
               Pedro Brito
@@ -49,7 +49,7 @@ export default function Header() {
             <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#projects" onClick={handleLinkClick}>Projetos</Link>
             <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#skills" onClick={handleLinkClick}>Habilidades</Link>
             <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#sobremim" onClick={handleLinkClick}>Sobre Mim</Link>
-            <Link className="font-medium text-[#4c238d] hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#curriculo" onClick={handleLinkClick}>Curriculo</Link>
+            <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#curriculo" onClick={handleLinkClick}>Curriculo</Link>
             <Link className="font-medium text-white hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="/#contact" onClick={handleLinkClick}>Contato</Link>
           </div>
         </div>

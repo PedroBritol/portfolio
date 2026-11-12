@@ -121,34 +121,10 @@
   }
 }
 
-.custom-swiper .swiper-button-prev,
-.custom-swiper .swiper-button-next {
-  /* Estilos de aparência que você já tinha */
-  --swiper-navigation-color: #0ea5e9; /* Exemplo: azul-céu */
-  --swiper-navigation-size: 28px;
-  /* Adicione mais estilos se quiser, como um fundo */
-  @apply bg-white/80 rounded-full w-12 h-12 shadow-md hover:bg-white;
+.mySwiper .swiper-pagination-bullet {
+  background-color: #aaa;
 }
 
-/* 2. AQUI ESTÁ A MÁGICA: Reposicionamos as setas */
-.custom-swiper .swiper-button-prev {
-  left: 0px; /* Move a seta para a borda esquerda da área de padding */
-}
-
-.custom-swiper .swiper-button-next {
-  right: 0px; /* Move a seta para a borda direita da área de padding */
-}
-
-/* Opcional: Estilizar os ícones internos se precisar */
-.custom-swiper .swiper-button-prev::after,
-.custom-swiper .swiper-button-next::after {
-  @apply font-extrabold;
-}
-
-.custom-swiper .swiper-pagination-bullet {
-  @apply bg-white opacity-30;
-}
-
-.custom-swiper .swiper-pagination-bullet-active {
-  @apply bg-[#522c8f] opacity-100;
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #5227FF;
 }

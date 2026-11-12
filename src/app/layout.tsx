@@ -5,6 +5,7 @@ import Particles from "../../Reactbits/Particles";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pedro Brito - Desenvolvedor & Analista de Dados",
   description: "Portfólio de Pedro Brito, especialista em desenvolvimento web com Laravel e Next.js, e análise de dados.",
+  keywords: [
+    "Pedro Brito", "Desenvolvedor Web", "Desenvolvedor Full Stack", "Analista de Dados",
+    "Engenharia de Dados", "Power BI", "Portfólio", "Laravel", "Next.js", "React",
+    "TypeScript", "Programador", "Data Analyst", "São Mateus", "Espírito Santo", "ES",
+    "power bi", "python", "sql", "são mateus es", "engenheiro de dados"
+  ],
   icons: {
     icon: "/favicon.ico",
   },
@@ -52,6 +59,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

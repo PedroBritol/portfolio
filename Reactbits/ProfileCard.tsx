@@ -315,7 +315,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                     <div className="pc-status">{status}</div>
                   </div>
                 </div>
-                <a href={`https://instagram.com/${handle}`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://www.linkedin.com/in/${handle}`} target="_blank" rel="noopener noreferrer">
                   <button
                   className="pc-contact-btn"
                   onClick={handleContactClick}

@@ -96,7 +96,7 @@ export const projectsData: ProjectProps[] = [
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     src: 'https://github.com/pedrobritol/portfolio',
     srcLabel: 'Ver Repositório no GitHub',
-    text: 'Este projeto é o meu portfólio oficial, criado para reunir minha trajetória em Análise de Dados e Desenvolvimento Web em uma experiência moderna, responsiva e de alta performance.',
+    text: 'Este projeto é o meu portfólio oficial, criado para reunir minha trajetória em Engenharia de Dados, Análise de Dados e Desenvolvimento Web em uma experiência moderna, responsiva e de alta performance.',
     sections: [
       {
         title: 'Arquitetura e Tecnologias',

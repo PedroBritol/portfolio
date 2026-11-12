@@ -1,27 +1,28 @@
 # Portfólio de Pedro Henrique Brito Lucas (Pedro Brito)
 
-> Estudante de Engenharia da Computação (UFES), Estagiário de Engenharia de Dados na EloGroup e Desenvolvedor Web Full Stack em São Mateus - ES, Brasil.
+> Estudante de Engenharia da Computação na UFES, Estagiário de Engenharia de Dados na EloGroup e Desenvolvedor Web Full Stack em São Mateus - ES, Brasil.
 
-## Informações Principais
-- **Nome**: Pedro Henrique Brito Lucas (Pedro Brito)
-- **Áreas de Atuação**: Engenharia de Dados, Análise de Dados (BI) e Desenvolvimento Web Full Stack
-- **Formação**: Engenharia da Computação — Universidade Federal do Espírito Santo (UFES - CEUNES, São Mateus - ES)
-- **Website**: https://www.pedrobritol.com.br
-- **GitHub**: https://github.com/PedroBritol
-- **LinkedIn**: https://www.linkedin.com/in/pedro-britol/
-- **E-mail**: pb_lucasbol@hotmail.com
+Este documento resume as páginas, projetos, experiências e contatos públicos de Pedro Henrique Brito Lucas para indexação por mecanismos de busca e agentes de IA.
 
-## Experiências
-- **Estagiário de Engenharia de Dados** — EloGroup (abr/2026 – atual · Remoto): construção e manutenção de pipelines ETL, ingestão e tratamento de dados com Python e SQL, transformação com dbt, orquestração no Apache Airflow e infraestrutura em nuvem com AWS e Terraform.
-- **Estagiário em Análise de Dados** — Rumo Atuarial – Consultoria em Estatística e Atuária (fev/2026 – abr/2026 · Remoto): tratamento de grandes volumes de dados em Python, dashboards no Power BI, fluxos no Power Query, análise exploratória e validação em Excel.
-- **Estagiário em Análise de Dados** — Prefeitura Municipal de São Mateus (fev/2025 – fev/2026 · Presencial): relatórios e dashboards com Power BI e Excel, ETL via Power Query, apoio a KPIs educacionais e suporte a sistemas (Presença, Censo Escolar e Google Workspace).
-- **Assessor de Desenvolvimento** — Adapti Soluções Web (Empresa Júnior, mar/2022 – abr/2023): desenvolvimento full stack com Next.js, TypeScript, Tailwind CSS, Laravel, PHP e MySQL em equipe ágil Scrum.
-
-## Stack Técnica
-- **Dados, Cloud & BI**: AWS, Terraform, Apache Airflow, dbt, ETL, Python, SQL, Power BI, DAX, Power Query, Excel, MySQL, SQL Server.
-- **Desenvolvimento Web**: Next.js, React, TypeScript, JavaScript, Tailwind CSS, HTML5, CSS3, Laravel, PHP.
+## Páginas Principais
+- [Página Inicial](https://www.pedrobritol.com.br): Visão geral da atuação em Engenharia de Dados, Análise de Dados (BI) e Desenvolvimento Web Full Stack, habilidades técnicas e currículo completo.
+- [Catálogo de Projetos](https://www.pedrobritol.com.br/projetos): Listagem filtrável por categoria (Dados & BI, Desenvolvimento Web e Certificações).
+- [Currículo em PDF](https://www.pedrobritol.com.br/Pedro_Henrique_Brito_Lucas.pdf): Documento resumido com trajetória profissional e formação acadêmica.
+- [Sitemap XML](https://www.pedrobritol.com.br/sitemap.xml): Mapa completo das rotas públicas indexáveis.
 
 ## Projetos em Destaque
-- **Dashboard de Frotas** (`/projetos/1`): painel interativo em Power BI para gestão logística, custos e indicadores de frota.
-- **Portfólio Pessoal** (`/projetos/2`): aplicação web em Next.js, TypeScript, Tailwind CSS e WebGL.
-- **Imuniza** (`/projetos/3`): sistema web em Laravel, PHP, MySQL e Bootstrap para gestão de vacinação e geração de relatórios em PDF.
+- [Dashboard de Frotas](https://www.pedrobritol.com.br/projetos/1): Painel interativo em Power BI, DAX, Power Query e Excel para gestão logística, custos e KPIs de frota.
+- [Portfólio Pessoal](https://www.pedrobritol.com.br/projetos/2): Aplicação web em Next.js App Router, TypeScript, Tailwind CSS e WebGL.
+- [Imuniza](https://www.pedrobritol.com.br/projetos/3): Sistema web desenvolvido com Laravel, PHP, MySQL e Bootstrap para gestão de vacinação e emissão de relatórios em PDF.
+- [Certificados](https://drive.google.com/drive/folders/1jTRO6-xGluFgw3KiEBguxJnTRl5SkQop?usp=sharing): Coleção de certificados em SQL, Power BI, Excel e Next.js no Google Drive.
+
+## Experiências Profissionais
+- **Estagiário de Engenharia de Dados** — EloGroup (abr/2026 – atual · Remoto): Pipelines ETL em nuvem com AWS, Terraform, Apache Airflow, dbt, Python e SQL.
+- **Estagiário em Análise de Dados** — Rumo Atuarial (fev/2026 – abr/2026 · Remoto): Manipulação de dados em Python, dashboards no Power BI, Power Query, análise exploratória e validação em Excel.
+- **Estagiário em Análise de Dados** — Prefeitura Municipal de São Mateus (fev/2025 – fev/2026 · Presencial): Relatórios e KPIs educacionais com Power BI, Excel, Power Query e suporte ao Censo Escolar e Google Workspace.
+- **Assessor de Desenvolvimento** — Adapti Soluções Web (mar/2022 – abr/2023): Desenvolvimento full stack com Next.js, TypeScript, Tailwind CSS, Laravel, PHP e MySQL.
+
+## Perfis e Contato
+- [LinkedIn](https://www.linkedin.com/in/pedro-britol/)
+- [GitHub](https://github.com/PedroBritol)
+- [Enviar E-mail](mailto:pb_lucasbol@hotmail.com)

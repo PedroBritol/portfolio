@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useCallback, useMemo } from 'react';
+import React, { useEffect, useRef, useCallback, useMemo, useState } from 'react';
+import Image from 'next/image';
 import './ProfileCard.css';
 
 interface ProfileCardProps {
@@ -69,6 +70,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 }) => {
   const wrapRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
+  const [avatarFailed, setAvatarFailed] = useState(false);
+  const [miniAvatarFailed, setMiniAvatarFailed] = useState(false);
 
   const animationHandlers = useMemo(() => {
     if (!enableTilt) return null;
@@ -288,28 +291,29 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
           <div className="pc-shine" />
           <div className="pc-glare" />
           <div className="pc-content pc-avatar-content">
-            <img
-              className="avatar"
-              src={avatarUrl}
-              alt={`${name || 'User'} avatar`}
-              loading="lazy"
-              onError={e => {
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-              }}
-            />
+            {!avatarFailed && (
+              <Image
+                className="avatar"
+                src={avatarUrl}
+                alt={`${name || 'User'} avatar`}
+                width={432}
+                height={577}
+                sizes="(max-width: 640px) 275px, 310px"
+                onError={() => setAvatarFailed(true)}
+              />
+            )}
             {showUserInfo && (
               <div className="pc-user-info">
                 <div className="pc-user-details">
                   <div className="pc-mini-avatar">
-                    <img
-                      src={miniAvatarUrl || avatarUrl}
+                    <Image
+                      src={miniAvatarFailed ? avatarUrl : miniAvatarUrl || avatarUrl}
                       alt={`${name || 'User'} mini avatar`}
-                      loading="lazy"
-                      onError={e => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.opacity = '0.5';
-                        target.src = avatarUrl;
+                      width={48}
+                      height={48}
+                      sizes="48px"
+                      onError={() => {
+                        if (!miniAvatarFailed) setMiniAvatarFailed(true);
                       }}
                     />
                   </div>

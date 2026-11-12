@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FiArrowDown, FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
-import LiquidEther from '../../../Reactbits/LiquidEther';
+import { LazyLiquidEther } from '@/components/effects/LazyBackgrounds';
 import RotatingText from '../../../Reactbits/RotatingText';
 
 export default function Hero() {
@@ -10,15 +10,15 @@ export default function Hero() {
       className="relative min-h-[100svh] w-full bg-neutral-950 text-white flex items-center justify-center overflow-hidden pt-24 pb-16"
     >
       <div className="absolute inset-0">
-        <LiquidEther
+        <LazyLiquidEther
           colors={['#5227FF', '#9A5CFF', '#B19EEF']}
           mouseForce={20}
           cursorSize={100}
           isViscous={false}
           viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
+          iterationsViscous={16}
+          iterationsPoisson={16}
+          resolution={0.45}
           isBounce={false}
           autoDemo={true}
           autoSpeed={0.5}
@@ -52,11 +52,12 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="flex flex-wrap items-center gap-3 mt-6 text-xl sm:text-2xl font-semibold">
+          <div className="flex flex-col items-start sm:flex-row sm:items-center gap-2 sm:gap-3 mt-6 text-base sm:text-xl md:text-2xl font-semibold">
             <span className="text-neutral-300 font-medium">Atuação em</span>
             <RotatingText
               texts={['Engenharia de Dados', 'Analista de Dados', 'Desenvolvedor Web', 'Desenvolvedor Full Stack']}
-              mainClassName="px-3 sm:px-4 bg-violet-600/90 border border-violet-400/30 text-white overflow-hidden py-1 sm:py-1.5 justify-center rounded-xl shadow-lg shadow-violet-950/50"
+              mainClassName="whitespace-nowrap inline-flex items-center h-9 sm:h-11 px-3.5 sm:px-4 bg-violet-600/90 border border-violet-400/30 text-white overflow-hidden justify-center rounded-xl shadow-lg shadow-violet-950/50 leading-none"
+              splitBy="words"
               staggerFrom="last"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
@@ -103,7 +104,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex items-center gap-4 text-neutral-400">
-            <span className="text-xs uppercase tracking-wider text-neutral-500 font-medium">Conecte-se</span>
+            <span className="text-xs uppercase tracking-wider text-neutral-400 font-medium">Conecte-se</span>
             <span className="h-px w-8 bg-white/15" aria-hidden="true" />
             <a
               href="https://github.com/PedroBritol"

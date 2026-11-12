@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Renderer, Camera, Geometry, Program, Mesh } from 'ogl';
 
-interface ParticlesProps {
+export interface ParticlesProps {
   particleCount?: number;
   particleSpread?: number;
   speed?: number;
@@ -253,6 +253,7 @@ const Particles: React.FC<ParticlesProps> = ({
       if (container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
       }
+      gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
   }, [
     particleCount,

@@ -38,7 +38,7 @@ export default function Projects() {
 
         <div
           className="flex flex-wrap justify-center gap-2 mb-10"
-          role="tablist"
+          role="group"
           aria-label="Filtrar projetos por categoria"
         >
           {filters.map((filter) => {
@@ -52,19 +52,18 @@ export default function Projects() {
               <button
                 key={filter.id}
                 type="button"
-                role="tab"
-                aria-selected={isActive}
+                aria-pressed={isActive}
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? 'bg-violet-600 text-white shadow-md shadow-violet-950/50'
+                    ? 'bg-violet-700 text-white shadow-md shadow-violet-950/50'
                     : 'bg-neutral-900/80 text-neutral-300 border border-white/10 hover:border-violet-500/40 hover:text-white'
                 }`}
               >
                 {filter.label}
                 <span
                   className={`ml-2 text-xs px-1.5 py-0.5 rounded-full ${
-                    isActive ? 'bg-white/20 text-white' : 'bg-white/5 text-neutral-400'
+                    isActive ? 'bg-violet-950/65 text-white' : 'bg-white/5 text-neutral-300'
                   }`}
                 >
                   {count}

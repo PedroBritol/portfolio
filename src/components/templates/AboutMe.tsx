@@ -73,7 +73,7 @@ export default function AboutMe() {
                 className="inline-flex items-center justify-center gap-2.5 border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
               >
                 <FaWhatsapp className="size-5 text-emerald-400" />
-                <span>Entrar em Contato</span>
+                <span>Chamar no WhatsApp</span>
               </a>
             </div>
           </div>

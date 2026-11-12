@@ -265,7 +265,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
     }, [pauseOnHover]);
 
     const renderLogoItem = useCallback(
-      (item: LogoItem, key: React.Key) => {
+      (item: LogoItem, key: React.Key, isClone: boolean) => {
         const isNodeItem = 'node' in item;
 
         const content = isNodeItem ? (
@@ -319,6 +319,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
             aria-label={itemAriaLabel || 'logo link'}
             target="_blank"
             rel="noreferrer noopener"
+            tabIndex={isClone ? -1 : undefined}
           >
             {content}
           </a>
@@ -352,7 +353,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
             aria-hidden={copyIndex > 0}
             ref={copyIndex === 0 ? seqRef : undefined}
           >
-            {logos.map((item, itemIndex) => renderLogoItem(item, `${copyIndex}-${itemIndex}`))}
+            {logos.map((item, itemIndex) => renderLogoItem(item, `${copyIndex}-${itemIndex}`, copyIndex > 0))}
           </ul>
         )),
       [copyCount, logos, renderLogoItem]

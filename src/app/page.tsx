@@ -7,7 +7,7 @@ import ClickSpark from './../../Reactbits/ClickSpark';
 import Resume from '@/components/templates/Resume';
 import AboutMe from '@/components/templates/AboutMe';
 import Footer from '@/components/templates/Footer';
-import Particles from '../../Reactbits/Particles';
+import { LazyParticles } from '@/components/effects/LazyBackgrounds';
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
           aria-hidden="true"
           className="fixed inset-0 -z-10 pointer-events-none"
         >
-          <Particles
+          <LazyParticles
             particleColors={['#ffffff', '#c4b5fd', '#a78bfa']}
             particleCount={120}
             particleSpread={10}

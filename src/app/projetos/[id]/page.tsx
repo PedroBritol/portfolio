@@ -207,6 +207,7 @@ export default async function ProjectPage({ params }: PageProps) {
                     src={project.frameSrc}
                     className="w-full h-full border-0"
                     loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   />
                 </div>

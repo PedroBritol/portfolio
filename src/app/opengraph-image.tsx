@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Pedro Brito — Analista de Dados & Desenvolvedor Web';
+export const alt = 'Pedro Brito — Engenharia & Análise de Dados • Dev Web';
 export const size = {
   width: 1200,
   height: 630,

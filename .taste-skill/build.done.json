@@ -1,0 +1,10 @@
+{
+ "page": null,
+ "dir": "/home/carlos/code/sites/pedro-portfolio",
+ "kind": "service",
+ "start": "2026-11-12T22:53:01.218Z",
+ "by": "start.mjs",
+ "url": "http://localhost:3100/",
+ "category": "dashboards em Power BI e sistemas web",
+ "primary": "Chamar no WhatsApp"
+}

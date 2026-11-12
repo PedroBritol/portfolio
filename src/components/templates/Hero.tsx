@@ -55,7 +55,7 @@ export default function Hero() {
           <div className="flex flex-col items-start sm:flex-row sm:items-center gap-2 sm:gap-3 mt-6 text-base sm:text-xl md:text-2xl font-semibold">
             <span className="text-neutral-300 font-medium">Atuação em</span>
             <RotatingText
-              texts={['Engenharia de Dados', 'Analista de Dados', 'Desenvolvedor Web', 'Desenvolvedor Full Stack']}
+              texts={['Engenharia de Dados', 'Analista de Dados', 'Desenvolvedor Web']}
               mainClassName="whitespace-nowrap inline-flex items-center h-9 sm:h-11 px-3.5 sm:px-4 bg-violet-600/90 border border-violet-400/30 text-white overflow-hidden justify-center rounded-xl shadow-lg shadow-violet-950/50 leading-none"
               splitBy="words"
               staggerFrom="last"

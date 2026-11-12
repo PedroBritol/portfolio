@@ -189,22 +189,24 @@ export default function LiquidEther({
       private _onTouchEnd = this.onTouchEnd.bind(this);
       init(container: HTMLElement) {
         this.container = container;
-        container.addEventListener('mousemove', this._onMouseMove);
-        container.addEventListener('touchstart', this._onTouchStart, { passive: true });
-        container.addEventListener('touchmove', this._onTouchMove, { passive: true });
-        container.addEventListener('mouseenter', this._onMouseEnter);
-        container.addEventListener('mouseleave', this._onMouseLeave);
-        container.addEventListener('touchend', this._onTouchEnd);
+        const target = container.parentElement ?? container;
+        target.addEventListener('mousemove', this._onMouseMove);
+        target.addEventListener('touchstart', this._onTouchStart, { passive: true });
+        target.addEventListener('touchmove', this._onTouchMove, { passive: true });
+        target.addEventListener('mouseenter', this._onMouseEnter);
+        target.addEventListener('mouseleave', this._onMouseLeave);
+        target.addEventListener('touchend', this._onTouchEnd);
       }
       dispose() {
         const c = this.container;
         if (!c) return;
-        c.removeEventListener('mousemove', this._onMouseMove);
-        c.removeEventListener('touchstart', this._onTouchStart);
-        c.removeEventListener('touchmove', this._onTouchMove);
-        c.removeEventListener('mouseenter', this._onMouseEnter);
-        c.removeEventListener('mouseleave', this._onMouseLeave);
-        c.removeEventListener('touchend', this._onTouchEnd);
+        const target = c.parentElement ?? c;
+        target.removeEventListener('mousemove', this._onMouseMove);
+        target.removeEventListener('touchstart', this._onTouchStart);
+        target.removeEventListener('touchmove', this._onTouchMove);
+        target.removeEventListener('mouseenter', this._onMouseEnter);
+        target.removeEventListener('mouseleave', this._onMouseLeave);
+        target.removeEventListener('touchend', this._onTouchEnd);
       }
       setCoords(x: number, y: number) {
         if (!this.container) return;
@@ -1068,15 +1070,28 @@ export default function LiquidEther({
     container.style.position = container.style.position || 'relative';
     container.style.overflow = container.style.overflow || 'hidden';
 
-    const webgl = new WebGLManager({
-      $wrapper: container,
-      autoDemo,
-      autoSpeed,
-      autoIntensity,
-      takeoverDuration,
-      autoResumeDelay,
-      autoRampDuration
-    });
+    const prefersReduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      return;
+    }
+
+    let webgl: WebGLManager;
+    try {
+      webgl = new WebGLManager({
+        $wrapper: container,
+        autoDemo,
+        autoSpeed,
+        autoIntensity,
+        takeoverDuration,
+        autoResumeDelay,
+        autoRampDuration
+      });
+    } catch {
+      return;
+    }
     webglRef.current = webgl;
 
     const applyOptionsFromProps = () => {

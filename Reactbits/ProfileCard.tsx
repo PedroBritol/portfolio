@@ -19,14 +19,15 @@ interface ProfileCardProps {
   handle?: string;
   status?: string;
   contactText?: string;
+  contactHref?: string;
   showUserInfo?: boolean;
   onContactClick?: () => void;
 }
 
 const DEFAULT_BEHIND_GRADIENT =
-  'radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(266,100%,90%,var(--card-opacity)) 4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75)) 10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5)) 50%,hsla(266,0%,60%,0) 100%),radial-gradient(35% 52% at 55% 20%,#00ffaac4 0%,#073aff00 100%),radial-gradient(100% 100% at 50% 50%,#00c1ffff 1%,#073aff00 76%),conic-gradient(from 124deg at 50% 50%,#c137ffff 0%,#07c6ffff 40%,#07c6ffff 60%,#c137ffff 100%)';
+  'radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(266,100%,90%,var(--card-opacity)) 4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75)) 10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5)) 50%,hsla(266,0%,60%,0) 100%),radial-gradient(35% 52% at 55% 20%,#7c3aed99 0%,#073aff00 100%),radial-gradient(100% 100% at 50% 50%,#a855f788 1%,#073aff00 76%),conic-gradient(from 124deg at 50% 50%,#7c3aed 0%,#ec4899 40%,#6366f1 60%,#7c3aed 100%)';
 
-const DEFAULT_INNER_GRADIENT = 'linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)';
+const DEFAULT_INNER_GRADIENT = 'linear-gradient(145deg,rgba(82,39,255,0.28) 0%,rgba(24,24,27,0.92) 55%,rgba(168,85,247,0.22) 100%)';
 
 const ANIMATION_CONFIG = {
   SMOOTH_DURATION: 600,
@@ -41,14 +42,14 @@ const clamp = (value: number, min = 0, max = 100): number => Math.min(Math.max(v
 const round = (value: number, precision = 3): number => parseFloat(value.toFixed(precision));
 
 const adjust = (value: number, fromMin: number, fromMax: number, toMin: number, toMax: number): number =>
-  round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
+  fromMax === fromMin ? toMin : round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
 
 const easeInOutCubic = (x: number): number => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
-  avatarUrl = '<Placeholder for avatar URL>',
-  iconUrl = '<Placeholder for icon URL>',
-  grainUrl = '<Placeholder for grain URL>',
+  avatarUrl = '/avatar.png',
+  iconUrl,
+  grainUrl,
   behindGradient,
   innerGradient,
   showBehindGradient = true,
@@ -57,11 +58,12 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   enableMobileTilt = false,
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
-  name = 'Javi A. Torres',
-  title = 'Software Engineer',
-  handle = 'javicodes',
+  name = 'Pedro Brito',
+  title = 'Analista de Dados & Dev',
+  handle = 'pedro-britol',
   status = 'Online',
-  contactText = 'Contact',
+  contactText = 'LinkedIn',
+  contactHref,
   showUserInfo = true,
   onContactClick
 }) => {
@@ -74,8 +76,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     let rafId: number | null = null;
 
     const updateCardTransform = (offsetX: number, offsetY: number, card: HTMLElement, wrap: HTMLElement) => {
-      const width = card.clientWidth;
-      const height = card.clientHeight;
+      const width = Math.max(1, card.clientWidth);
+      const height = Math.max(1, card.clientHeight);
 
       const percentX = clamp((100 / width) * offsetX);
       const percentY = clamp((100 / height) * offsetY);
@@ -172,10 +174,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 
       if (!card || !wrap || !animationHandlers) return;
 
+      const rect = card.getBoundingClientRect();
       animationHandlers.createSmoothAnimation(
         ANIMATION_CONFIG.SMOOTH_DURATION,
-        event.offsetX,
-        event.offsetY,
+        event.clientX - rect.left,
+        event.clientY - rect.top,
         card,
         wrap
       );
@@ -315,16 +318,16 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                     <div className="pc-status">{status}</div>
                   </div>
                 </div>
-                <a href={`https://www.linkedin.com/in/${handle}`} target="_blank" rel="noopener noreferrer">
-                  <button
+                <a
+                  href={contactHref ?? `https://www.linkedin.com/in/${handle}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="pc-contact-btn"
                   onClick={handleContactClick}
                   style={{ pointerEvents: 'auto' }}
-                  type="button"
-                  aria-label={`Contact ${name || 'user'} on Instagram`}
-                  >
+                  aria-label={`Visitar ${contactText} de ${name || 'Pedro Brito'}`}
+                >
                   {contactText}
-                  </button>
                 </a>
               </div>
             )}

@@ -72,7 +72,6 @@ const vertex = /* glsl */ `
     }
     
     gl_Position = projectionMatrix * mvPos;
-    gl_Position = projectionMatrix * mvPos;
   }
 `;
 
@@ -121,7 +120,18 @@ const Particles: React.FC<ParticlesProps> = ({
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({ depth: false, alpha: true });
+    const prefersReduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let renderer: Renderer;
+    try {
+      renderer = new Renderer({ depth: false, alpha: true, dpr: Math.min(window.devicePixelRatio || 1, 2) });
+    } catch {
+      return;
+    }
+
     const gl = renderer.gl;
     container.appendChild(gl.canvas);
     gl.clearColor(0, 0, 0, 0);
@@ -130,23 +140,24 @@ const Particles: React.FC<ParticlesProps> = ({
     camera.position.set(0, 0, cameraDistance);
 
     const resize = () => {
-      const width = container.clientWidth;
-      const height = container.clientHeight;
+      const width = container.clientWidth || window.innerWidth;
+      const height = container.clientHeight || window.innerHeight;
       renderer.setSize(width, height);
-      camera.perspective({ aspect: gl.canvas.width / gl.canvas.height });
+      camera.perspective({ aspect: gl.canvas.width / Math.max(1, gl.canvas.height) });
     };
     window.addEventListener('resize', resize, false);
     resize();
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = container.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
       const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       const y = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
       mouseRef.current = { x, y };
     };
 
-    if (moveParticlesOnHover) {
-      container.addEventListener('mousemove', handleMouseMove);
+    if (moveParticlesOnHover && !prefersReduced) {
+      window.addEventListener('mousemove', handleMouseMove, { passive: true });
     }
 
     const count = particleCount;
@@ -192,43 +203,53 @@ const Particles: React.FC<ParticlesProps> = ({
 
     const particles = new Mesh(gl, { mode: gl.POINTS, geometry, program });
 
-    let animationFrameId: number;
+    let animationFrameId = 0;
     let lastTime = performance.now();
     let elapsed = 0;
 
-    const update = (t: number) => {
-      animationFrameId = requestAnimationFrame(update);
-      const delta = t - lastTime;
-      lastTime = t;
-      elapsed += delta * speed;
-
-      program.uniforms.uTime.value = elapsed * 0.001;
-
-      if (moveParticlesOnHover) {
-        particles.position.x = -mouseRef.current.x * particleHoverFactor;
-        particles.position.y = -mouseRef.current.y * particleHoverFactor;
-      } else {
-        particles.position.x = 0;
-        particles.position.y = 0;
-      }
-
-      if (!disableRotation) {
-        particles.rotation.x = Math.sin(elapsed * 0.0002) * 0.1;
-        particles.rotation.y = Math.cos(elapsed * 0.0005) * 0.15;
-        particles.rotation.z += 0.01 * speed;
-      }
-
+    if (prefersReduced) {
       renderer.render({ scene: particles, camera });
-    };
+    } else {
+      const update = (t: number) => {
+        animationFrameId = requestAnimationFrame(update);
+        if (document.hidden) {
+          lastTime = t;
+          return;
+        }
+        const delta = t - lastTime;
+        lastTime = t;
+        elapsed += delta * speed;
 
-    animationFrameId = requestAnimationFrame(update);
+        program.uniforms.uTime.value = elapsed * 0.001;
+
+        if (moveParticlesOnHover) {
+          particles.position.x = -mouseRef.current.x * particleHoverFactor;
+          particles.position.y = -mouseRef.current.y * particleHoverFactor;
+        } else {
+          particles.position.x = 0;
+          particles.position.y = 0;
+        }
+
+        if (!disableRotation) {
+          particles.rotation.x = Math.sin(elapsed * 0.0002) * 0.1;
+          particles.rotation.y = Math.cos(elapsed * 0.0005) * 0.15;
+          particles.rotation.z += 0.01 * speed;
+        }
+
+        renderer.render({ scene: particles, camera });
+      };
+
+      animationFrameId = requestAnimationFrame(update);
+    }
 
     return () => {
       window.removeEventListener('resize', resize);
-      if (moveParticlesOnHover) {
-        container.removeEventListener('mousemove', handleMouseMove);
+      if (moveParticlesOnHover && !prefersReduced) {
+        window.removeEventListener('mousemove', handleMouseMove);
       }
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
       if (container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
       }
